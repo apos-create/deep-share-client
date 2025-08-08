@@ -1,13 +1,20 @@
 import React from 'react'
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes, useNavigate } from 'react-router-dom'
 import "../css/navbar.css"
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
+    // handle logo click
+    const handleLogoClick = () => {
+        navigate('/feeds');
+    }
+
     return (
         <div className='navbar'>
 
             <div className="left-navbar">
-                <div className="logo">
+                <div className="logo" onClick={handleLogoClick}>
                     <img src="https://image4.owler.com/logo/cover-whale-insurance_owler_20210607_142535_original.png" alt="DeepShare Logo" />
                 </div>
 
@@ -18,24 +25,24 @@ const Navbar = () => {
             </div>
 
             <div className="right-navbar">
-                <NavLink to={'/'}>
-                <i className="fa-solid fa-house"></i>
+                <NavLink to={'/feeds'}>
+                    <i className="fa-solid fa-house"></i>
                     <span>Home</span>
                 </NavLink>
                 <NavLink to={'/people'}>
-                <i className="fa-solid fa-users"></i>
+                    <i className="fa-solid fa-users"></i>
                     <span>People</span>
                 </NavLink>
                 <NavLink to={'/notifications'}>
-                <i className="fa-solid fa-bell"></i>
+                    <i className="fa-solid fa-bell"></i>
                     <span>Notifications</span>
                 </NavLink>
                 <NavLink to={'/my-profile'}>
-                <i className="fa-solid fa-circle-user"></i>
+                    <i className="fa-solid fa-circle-user"></i>
                     <span>My Profile</span>
                 </NavLink>
                 <NavLink to={'/settings'}>
-                <i className="fa-solid fa-gear"></i>
+                    <i className="fa-solid fa-gear"></i>
                     <span>Setting</span>
                 </NavLink>
             </div>
