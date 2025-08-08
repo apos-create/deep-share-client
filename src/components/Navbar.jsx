@@ -18,15 +18,19 @@ const Navbar = () => {
 
             <div className="right-navbar">
                 <NavLink to={'/'}>
+                <i className="fa-solid fa-house"></i>
                     <span>Home</span>
                 </NavLink>
                 <NavLink to={'/people'}>
+                <i className="fa-solid fa-users"></i>
                     <span>People</span>
                 </NavLink>
                 <NavLink to={'/notifications'}>
+                <i className="fa-solid fa-bell"></i>
                     <span>Notifications</span>
                 </NavLink>
                 <NavLink to={'/my-profile'}>
+                <i className="fa-solid fa-circle-user"></i>
                     <span>My Profile</span>
                 </NavLink>
             </div>
