@@ -3,6 +3,7 @@ import Login from './auth/Login';
 import Register from './auth/Register';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
+import Preloader from './components/Preloader';
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
       </Routes>
       <Navbar />
 
-     
+     <Preloader/>
     </>
   )
 };
