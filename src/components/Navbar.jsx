@@ -8,7 +8,7 @@ const Navbar = () => {
 
             <div className="left-navbar">
                 <div className="logo">
-                    <img src="https://t3.ftcdn.net/jpg/01/39/63/94/360_F_139639477_56w1dz3qNqCWlVEJvnXMjjs8qNHmQxTM.jpg" alt="DeepShare Logo" />
+                    <img src="https://image4.owler.com/logo/cover-whale-insurance_owler_20210607_142535_original.png" alt="DeepShare Logo" />
                 </div>
 
                 <div className="search-box">
@@ -33,6 +33,10 @@ const Navbar = () => {
                 <NavLink to={'/my-profile'}>
                 <i className="fa-solid fa-circle-user"></i>
                     <span>My Profile</span>
+                </NavLink>
+                <NavLink to={'/settings'}>
+                <i className="fa-solid fa-gear"></i>
+                    <span>Setting</span>
                 </NavLink>
             </div>
         </div>
