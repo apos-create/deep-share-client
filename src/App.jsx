@@ -2,6 +2,7 @@ import './App.css'
 import Login from './auth/Login';
 import Register from './auth/Register';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -12,7 +13,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         {/* other routes... */}
-      </Routes>
+      <Navbar/>
+
+    <i className="fa-solid fa-house-user"></i>
+      <h3>Welcome to My App</h3>
+      <h1>DeepShare - Your Gateway to Collaborative Learning</h1>
+      <p>DeepShare is a platform designed to enhance collaborative learning experiences.</p>
     </>
   )
 }
