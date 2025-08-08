@@ -4,8 +4,7 @@ import Register from './auth/Register';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 
-function App() {
-
+const App = () => {
 
   return (
     <>
@@ -13,14 +12,15 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         {/* other routes... */}
-      <Navbar/>
+      </Routes>
+      <Navbar />
 
-    <i className="fa-solid fa-house-user"></i>
+      <i className="fa-solid fa-house-user"></i>
       <h3>Welcome to My App</h3>
       <h1>DeepShare - Your Gateway to Collaborative Learning</h1>
       <p>DeepShare is a platform designed to enhance collaborative learning experiences.</p>
     </>
   )
-}
+};
 
-export default App
+export default App;
