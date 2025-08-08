@@ -12,6 +12,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="search-box">
+                    <i className="fa-solid fa-magnifying-glass"></i>
                     <input type="text" placeholder='Search here' />
                 </div>
             </div>
