@@ -5,7 +5,7 @@
     align-items: center;
     padding: .5rem 10%;
     background-color: #fff;
-    box-shadow: 0 5px 100px #00000034;
+    box-shadow: 0 5px 100px #00000015;
 }
 
 .left-navbar {
@@ -47,7 +47,7 @@
 
 .search-box input {
     width: 100%;
-
+    font-size: 16px;
     padding: 10px 20px;
     border-radius: 20px;
     outline: none;
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
+    width: 55%;
     color: #777;
 
 }
@@ -89,4 +89,27 @@
 
 .right-navbar span {
     font-size: 14px;
+}
+
+
+/* ##### media query starts here #####  */
+@media screen and (max-width:768px) {
+    .navbar{
+        padding: .5rem 1rem;
+    }
+    .left-navbar{
+        width: 20%;
+    }
+    .search-box{
+        display: none;
+    }
+    .right-navbar{
+        width: 60%;
+    }
+   .right-navbar i{
+    font-size: 24px;
+   }
+    .right-navbar span{
+        display: none;
+    }
 }
