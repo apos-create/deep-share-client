@@ -3,10 +3,14 @@ import './auth.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import { warnToast } from '../utils/toasts';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../redux/features/userSlice';
 
 
 const Register = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [registerData, setRegisterData] = useState({
@@ -33,7 +37,7 @@ const Register = () => {
       return;
     }
 
-     if (!registerData.username) {
+    if (!registerData.username) {
       warnToast("Username is required");
       return;
     }
@@ -47,21 +51,31 @@ const Register = () => {
       return;
     }
 
-   
+
 
     setIsLoading(true);
 
-    try {
-      console.log("Registering user: ", registerData);
-    } catch (error) {
-      console.log("register error : ", error.message);
+    // database data
+    const usr = {
+      ...registerData,
+      bio : "",
+      pic: "",
+      coverImage: "",
+      followers: "123k",
+      followings: "5",
+      posts: [],
+      reactions: [],
+      comments: [],
     }
-    finally {
-      setTimeout(() => {
-        navigate("/feeds");
-        setIsLoading(false);
-      }, 3000);
-    }
+
+    // APIs actions mock test
+
+    setTimeout(() => {
+      dispatch(registerUser(usr));
+      navigate("/feeds");
+      setIsLoading(false);
+    }, 3000);
+
   }
 
   return (

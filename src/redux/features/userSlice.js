@@ -17,7 +17,7 @@ const userSlice = createSlice({
             state.user = action.payload;
             state.isAuthenticated = true;
             localStorage.setItem("dPsR_user", JSON.stringify(action.payload));
-        },
+        }, 
         logoutUser:(state)=>{
             state.user = null;
             state.isAuthenticated = false;
