@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Route, Routes, useNavigate } from 'react-router-dom'
 import "../css/navbar.css"
+import ProfileIcon from './ProfileIcon';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -38,7 +39,7 @@ const Navbar = () => {
                     <span>Notifications</span>
                 </NavLink>
                 <NavLink to={'/my-profile'}>
-                    <i className="fa-solid fa-circle-user"></i>
+                    <ProfileIcon height={26}/>
                     <span>My Profile</span>
                 </NavLink>
                 <NavLink to={'/settings'}>
