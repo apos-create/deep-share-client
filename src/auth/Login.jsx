@@ -20,19 +20,19 @@ const Login = () => {
           
           <form>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email"><i className="fa-solid fa-envelope"></i> Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 className="form-control"
                 placeholder="Enter your email"
-                required
+                autoComplete='off'
               />
             </div>
             
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password"> <i className="fa-solid fa-lock"></i> Password</label>
               <div className="password-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -40,7 +40,8 @@ const Login = () => {
                   name="password"
                   className="form-control"
                   placeholder="Enter your password"
-                  required
+                autoComplete='off'
+
                 />
                 <button 
                   type="button" 

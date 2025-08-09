@@ -14,50 +14,53 @@ const Register = () => {
           <p>Create an account to start sharing your moments and connecting with friends.</p>
         </div>
       </div>
-      
+
       <div className="auth-right">
         <div className="auth-form">
           <h2>Create your account</h2>
-          
+
           <form>
             <div className="form-group">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name"> <i className="fa-solid fa-user"></i> Full Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 className="form-control"
                 placeholder="Enter your full name"
-                required
+                autoComplete='off'
+
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username"><i className="fa-solid fa-at"></i> Username</label>
               <input
                 type="text"
                 id="username"
                 name="username"
                 className="form-control"
                 placeholder="Choose a username"
-                required
+                autoComplete='off'
+
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email"> <i className="fa-solid fa-envelope"></i> Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 className="form-control"
                 placeholder="Enter your email"
-                required
+                autoComplete='off'
+
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password"> <i className="fa-solid fa-lock"></i> Password</label>
               <div className="password-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -65,10 +68,11 @@ const Register = () => {
                   name="password"
                   className="form-control"
                   placeholder="Create a password"
-                  required
+                  autoComplete='off'
+
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="password-toggle"
                   onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
@@ -87,14 +91,14 @@ const Register = () => {
                 </button>
               </div>
             </div>
-            
-            
-            
+
+
+
             <button type="submit" className="btn btn-primary">
               Sign Up
             </button>
           </form>
-          
+
           <div className="auth-footer">
             Already have an account? <NavLink to="/login">Log in</NavLink>
           </div>
