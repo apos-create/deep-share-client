@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
 import './auth.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Preloader from '../components/Preloader';
+import { warnToast } from '../utils/toasts';
+
 
 const Register = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [registerData, setRegisterData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    username: ""
+  });
+
+
+  // input change handler
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setRegisterData({ ...registerData, [name]: value });
+  };
+
 
 
   return (
@@ -25,11 +44,12 @@ const Register = () => {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="fullName"
                 className="form-control"
                 placeholder="Enter your full name"
                 autoComplete='off'
-
+                value={registerData.fullName}
+                onChange={handleChange}
               />
             </div>
 
@@ -42,7 +62,8 @@ const Register = () => {
                 className="form-control"
                 placeholder="Choose a username"
                 autoComplete='off'
-
+                value={registerData.username}
+                onChange={handleChange}
               />
             </div>
 
@@ -55,7 +76,8 @@ const Register = () => {
                 className="form-control"
                 placeholder="Enter your email"
                 autoComplete='off'
-
+                value={registerData.email}
+                onChange={handleChange}
               />
             </div>
 
@@ -69,7 +91,8 @@ const Register = () => {
                   className="form-control"
                   placeholder="Create a password"
                   autoComplete='off'
-
+                  value={registerData.password}
+                  onChange={handleChange}
                 />
                 <button
                   type="button"

@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       closeOnClick 
       draggable 
       pauseOnHover 
-      theme="colored" />
+      theme="dark" />
   </React.StrictMode>
 );
 
