@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const People = () => {
   return (
-    <div>People</div>
+    <>
+    <Navbar/>
+    
+    <h1>People</h1>
+    </>
   )
 }
 
