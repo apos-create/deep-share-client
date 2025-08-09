@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './auth.css';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -71,27 +72,10 @@ const Login = () => {
             <span className="divider-text">OR</span>
           </div>
           
-          <div className="social-login">
-            <button type="button" className="social-btn">
-              <img 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" 
-                alt="Google" 
-                className="social-icon"
-              />
-              Continue with Google
-            </button>
-            <button type="button" className="social-btn">
-              <img 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" 
-                alt="Facebook" 
-                className="social-icon"
-              />
-              Continue with Facebook
-            </button>
-          </div>
+         
           
           <div className="auth-footer">
-            Don't have an account? <a href="/register">Sign up</a>
+            Don't have an account? <NavLink to="/register">Sign up</NavLink>
           </div>
         </div>
       </div>
