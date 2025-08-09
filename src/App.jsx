@@ -7,13 +7,15 @@ import MyProfile from "./pages/MyProfile";
 import Notifications from "./pages/Notifications";
 import People from "./pages/People";
 import Settings from "./pages/Settings";
+import { useSelector } from 'react-redux';
 
 const App = () => {
-
+const {isAuthenticated} = useSelector(state=>state.user);
+console.log(isAuthenticated)
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={isAuthenticated ? (<Home />) : (<Login />)} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/feeds" element={<Home />} />
