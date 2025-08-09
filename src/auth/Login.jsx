@@ -3,8 +3,13 @@ import './auth.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import { warnToast } from '../utils/toasts';
+import { useSelector } from 'react-redux';
 
 const Login = () => {
+
+  const {user} = useSelector(state => state.user);
+  // console.log(user, user.email, user.password);
+
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,27 +32,31 @@ const Login = () => {
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(!loginData.email){
+
+    if (!loginData.email) {
       warnToast("Enter Your Email!")
       return;
     }
-     if(!loginData.password){
+    if (!loginData.password) {
       warnToast("Enter Your Password!")
       return;
     }
     setIsLoading(true);
-    try {
-      console.log("login successfully! : ", loginData);
-    } catch (error) {
-      console.log("login error : ", error.message);
-    }
-    finally {
+
+    // Simulate a login request
+    // In a real application, you would send loginData to your backend API
+    // and handle the response accordingly.
+
+    if (user.email === loginData.email && user.password === loginData.password) {
       setTimeout(() => {
         navigate("/feeds");
         setIsLoading(false);
       }, 3000);
+    }else{
+      setIsLoading(false);
+      warnToast("Invalid email or password");
     }
+
   };
 
   return (
