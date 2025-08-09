@@ -59,8 +59,8 @@ const Register = () => {
     const usr = {
       ...registerData,
       bio : "",
-      pic: "",
-      coverImage: "",
+      pic: "https://t4.ftcdn.net/jpg/05/89/93/27/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg",
+      coverImage: "https://marketplace.canva.com/EAFqqEifB7A/1/0/1600w/canva-purple-abstract-wave-linkedin-banner-JZMOuwP990Q.jpg",
       followers: "123k",
       followings: "5",
       posts: [],
