@@ -5,9 +5,14 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Provider store={store}>
+
+    
     <BrowserRouter>
       <App />
     </BrowserRouter>
@@ -19,6 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       draggable 
       pauseOnHover 
       theme="dark" />
+
+      </Provider>
   </React.StrictMode>
 );
 
