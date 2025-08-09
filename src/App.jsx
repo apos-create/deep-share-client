@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 const App = () => {
 const {isAuthenticated} = useSelector(state=>state.user);
-console.log(isAuthenticated)
+// console.log(isAuthenticated)
   return (
     <>
       <Routes>

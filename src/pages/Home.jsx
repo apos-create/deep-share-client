@@ -1,6 +1,8 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import ProfileIcon from '../components/ProfileIcon'
+import React from 'react';
+import Navbar from '../components/Navbar';
+import ProfileIcon from '../components/ProfileIcon';
+import CoverImage from '../components/CoverImage';
+
 
 const Home = () => {
   return (
@@ -10,6 +12,7 @@ const Home = () => {
     <h1>Home</h1>
 
     <ProfileIcon height={50}/>
+    <CoverImage clsName="cover-image" />
     </>
   )
 }
