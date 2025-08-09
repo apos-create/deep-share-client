@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './auth.css';
+import { NavLink } from 'react-router-dom';
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -125,7 +126,7 @@ const Register = () => {
           </form>
           
           <div className="auth-footer">
-            Already have an account? <a href="/login">Log in</a>
+            Already have an account? <NavLink to="/login">Log in</NavLink>
           </div>
         </div>
       </div>
