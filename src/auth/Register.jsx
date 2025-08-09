@@ -33,6 +33,10 @@ const Register = () => {
       return;
     }
 
+     if (!registerData.username) {
+      warnToast("Username is required");
+      return;
+    }
     if (!registerData.email) {
       warnToast("Email is required");
       return;
@@ -43,10 +47,7 @@ const Register = () => {
       return;
     }
 
-    if (!registerData.username) {
-      warnToast("Username is required");
-      return;
-    }
+   
 
     setIsLoading(true);
 
