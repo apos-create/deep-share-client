@@ -4,6 +4,22 @@ import { NavLink } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
+
+  // handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({
+      ...loginData,
+      [name]: value
+    })
+  }
 
   return (
     <div className="auth-container">
@@ -13,11 +29,11 @@ const Login = () => {
           <p>Connect with friends and share your moments on our social platform.</p>
         </div>
       </div>
-      
+
       <div className="auth-right">
         <div className="auth-form">
           <h2>Login to your account</h2>
-          
+
           <form>
             <div className="form-group">
               <label htmlFor="email"><i className="fa-solid fa-envelope"></i> Email</label>
@@ -28,9 +44,11 @@ const Login = () => {
                 className="form-control"
                 placeholder="Enter your email"
                 autoComplete='off'
+                value={loginData.email}
+                onChange={handleChange}
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="password"> <i className="fa-solid fa-lock"></i> Password</label>
               <div className="password-wrapper">
@@ -40,11 +58,12 @@ const Login = () => {
                   name="password"
                   className="form-control"
                   placeholder="Enter your password"
-                autoComplete='off'
-
+                  autoComplete='off'
+                  value={loginData.password}
+                  onChange={handleChange}
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="password-toggle"
                   onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
@@ -63,18 +82,18 @@ const Login = () => {
                 </button>
               </div>
             </div>
-            
+
             <button type="submit" className="btn btn-primary">
               Login
             </button>
           </form>
-          
+
           <div className="divider">
             <span className="divider-text">OR</span>
           </div>
-          
-         
-          
+
+
+
           <div className="auth-footer">
             Don't have an account? <NavLink to="/register">Sign up</NavLink>
           </div>
