@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './auth.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Preloader from '../components/Preloader';
+import { warnToast } from '../utils/toasts';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -26,6 +27,15 @@ const Login = () => {
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if(!loginData.email){
+      warnToast("Enter Your Email!")
+      return;
+    }
+     if(!loginData.password){
+      warnToast("Enter Your Password!")
+      return;
+    }
     setIsLoading(true);
     try {
       console.log("login successfully! : ", loginData);
@@ -34,8 +44,8 @@ const Login = () => {
     }
     finally {
       setTimeout(() => {
-        setIsLoading(false);
         navigate("/feeds");
+        setIsLoading(false);
       }, 3000);
     }
   };
