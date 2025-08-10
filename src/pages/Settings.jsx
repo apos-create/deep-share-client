@@ -5,7 +5,14 @@ const Settings = () => {
   return (
     <>
     <Navbar/>
-    <h1>Settings</h1>
+    
+    <div className="container">
+    <div className="left-content">
+
+    </div>
+    <div className="middle-content"></div>
+    <div className="right-content"></div>
+   </div>
    </>
   )
 }

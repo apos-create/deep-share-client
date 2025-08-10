@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-
+import "../css/home.css"
 
 
 const Home = () => {
@@ -8,9 +8,10 @@ const Home = () => {
     <>
      <Navbar />
     
-    <h1>Home</h1>
+   
 
    
+   <h1>home</h1>
     </>
   )
 }
