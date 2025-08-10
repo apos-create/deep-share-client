@@ -1,30 +1,31 @@
-.container{
+.container {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    padding:0 1rem ;
+    padding: 0 1rem;
     margin-top: 1.5rem;
     gap: 2rem;
 }
 
-.left-content, .right-content{
+.left-content,
+.right-content {
     width: 25%;
-    /* border: 1px solid; */
-    
+    border: 1px solid;
+
 }
 
-.middle-content{
+.middle-content {
     width: 40%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     border: 1px solid;
-    
+
 }
 
 /* ------------------  */
-.my-profile-card{
+.my-profile-card {
     width: 80%;
     border: 1px solid #ddd;
     margin-left: auto;
@@ -32,23 +33,26 @@
     overflow: hidden;
     position: relative;
     background-color: #fff;
-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.146);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.146);
 }
-.cover-img-wrap{
+
+.cover-img-wrap {
     position: relative;
     overflow: visible;
 }
-.my-card-cover{
+
+.my-card-cover {
     width: 100%;
     height: 100px;
 }
 
-.my-dp{
+.my-dp {
     position: absolute;
     top: 45%;
     left: 10%;
 }
-.my-card-content{
+
+.my-card-content {
     margin-top: 2.3rem;
     padding: 1rem;
     color: #555;

@@ -3,6 +3,10 @@ import Navbar from '../components/Navbar'
 import { useSelector } from 'react-redux'
 import ProfileIcon from '../components/ProfileIcon'
 import CoverImage from '../components/CoverImage'
+import ConnectCard from '../components/ConnectCard'
+import connectData from '../assets/connectData'
+import { NavLink } from 'react-router-dom'
+
 
 const Settings = () => {
   const { user } = useSelector((state) => state.user)
@@ -22,7 +26,7 @@ const Settings = () => {
               </div>
             </div>
 
-           
+
             <div className="my-card-content">
               <h2>{user.fullName}</h2>
               <p>Be Yourself!</p>
@@ -32,8 +36,19 @@ const Settings = () => {
 
           </div>
         </div>
+
         <div className="middle-content"></div>
-        <div className="right-content"></div>
+
+        <div className="right-content">
+        
+         {
+          connectData.slice(6,8).map((cd)=> <ConnectCard data={cd} />)
+        
+         }
+       
+
+        </div>
+
       </div>
     </>
   )

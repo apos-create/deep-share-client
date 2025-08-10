@@ -1,0 +1,58 @@
+.connect-card{
+    border-radius: 15px;
+    overflow: hidden;
+    width: 70%;
+    box-shadow: 0px 10px 50px #00000029;
+    margin: 1rem 0;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+}
+.connect-card-cover{
+    position: relative;
+}
+
+.connect-card-dp{
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -130%;
+    transform:  translate(-50%, -50%);
+    overflow: hidden;
+}
+.connect-card-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.connect-card-body{
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.connect-card-body button{
+    width: 80%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-top: .5rem;
+    background-color: #0c355f;
+    color: #fff;
+    transition: all .3s ease;
+}
+.connect-card-body button:hover{
+    background-color: #174675;
+}
+.t14{
+    font-size: 14px;
+}
+.t12{
+    font-size: 12px;
+}
+
