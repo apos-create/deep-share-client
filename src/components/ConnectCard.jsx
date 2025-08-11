@@ -24,7 +24,7 @@ const ConnectCard = ({ data }) => {
                 <h3>{data.fullName}</h3>
                 <p>{data.bio}</p>
                 <p className='t12'>DeepShare Suggestion</p>
-                <button>Connect</button>
+                <button><i className="fa-solid fa-user-plus"></i> Connect</button>
             </div>
         </div>
     )

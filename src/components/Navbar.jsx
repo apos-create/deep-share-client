@@ -35,6 +35,10 @@ const Navbar = () => {
                     <i className="fa-solid fa-users"></i>
                     <span>People</span>
                 </NavLink>
+                <NavLink to={'/chats'}>
+                    <i className="fa-solid fa-comments"></i>
+                    <span>Chats</span>
+                </NavLink>
                 <NavLink to={'/notifications'}>
                     <i className="fa-solid fa-bell"></i>
                     <span>Notifications</span>
