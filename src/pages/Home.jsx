@@ -9,6 +9,7 @@ import connectData from '../assets/connectData';
 import postData from '../assets/postData';
 
 import { NavLink } from 'react-router-dom'
+import { x_unit_ago } from '../utils/x_unit_ago';
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);
@@ -72,7 +73,7 @@ const Home = () => {
                     <div className="author-info">
                       <h3>{pd.author_name}</h3>
                       <p>{pd.author_bio}</p>
-                      <p className='small'>{pd.posted_at}</p>
+                      <p className='small'>{x_unit_ago(pd.posted_at)}</p>
                     </div>
                   </div>
 

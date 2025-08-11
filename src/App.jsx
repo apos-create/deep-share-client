@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import Notifications from "./pages/Notifications";
 import People from "./pages/People";
-import Settings from "./pages/Settings";
+
 import { useSelector } from 'react-redux';
 import Chats from './pages/Chats';
 
@@ -24,7 +24,7 @@ const {isAuthenticated} = useSelector(state=>state.user);
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/people" element={<People />} />
-        <Route path="/settings" element={<Settings />} />
+       
       </Routes>
     </>
   )

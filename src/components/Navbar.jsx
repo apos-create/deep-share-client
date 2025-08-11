@@ -47,10 +47,7 @@ const Navbar = () => {
                     <ProfileIcon height={26}/>
                     <span>My Profile</span>
                 </NavLink>
-                <NavLink to={'/settings'}>
-                    <i className="fa-solid fa-gear"></i>
-                    <span>Setting</span>
-                </NavLink>
+                
             </div>
         </div>
     )
