@@ -25,7 +25,7 @@ const Navbar = () => {
                     <input type="text" placeholder='Search here' />
                 </div>
             </div>
-
+ 
             <div className="right-navbar">
                 <NavLink to={'/feeds'}>
                     <i className="fa-solid fa-house"></i>

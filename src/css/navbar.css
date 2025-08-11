@@ -31,7 +31,6 @@
 .logo{
     color: #10467c;
     font-weight: bolder;
-
 }
 .search-box {
     width: 80%;
@@ -69,7 +68,6 @@
     align-items: center;
     width: 55%;
     color: #777;
-
 }
 
 .right-navbar a {
@@ -104,18 +102,13 @@
     .left-navbar{
         width: 20%;
     }
-    .logo{
-        width: 40px;
-        height: 40px;
-    }
+
     .search-box{
         display: none;
     }
     .right-navbar{
-        width: 70%;
+       display: none;
     }
    
-    .right-navbar span{
-        display: none;
-    }
+   
 }
