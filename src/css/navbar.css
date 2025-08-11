@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 20%;
+    padding: 1rem 10%;
     background-color: #fff;
     box-shadow: 0 5px 100px #00000015;
 }
@@ -13,10 +13,10 @@
     justify-content: start;
     align-items: center;
     gap: 2rem;
-    width: 30%;
+    width: 40%;
 }
 
-.logo {
+/* .logo {
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -27,8 +27,12 @@
     height: 100%;
     object-fit: cover;
 
-}
+} */
+.logo{
+    color: #10467c;
+    font-weight: bolder;
 
+}
 .search-box {
     width: 80%;
     display: flex;

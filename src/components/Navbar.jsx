@@ -16,7 +16,8 @@ const Navbar = () => {
 
             <div className="left-navbar">
                 <div className="logo" onClick={handleLogoClick}>
-                    <img src="https://image4.owler.com/logo/cover-whale-insurance_owler_20210607_142535_original.png" alt="DeepShare Logo" />
+                    {/* <img src="https://image4.owler.com/logo/cover-whale-insurance_owler_20210607_142535_original.png" alt="DeepShare Logo" /> */}
+               <h1>DeepShare</h1>
                 </div>
 
                 <div className="search-box">
