@@ -46,9 +46,9 @@ const Home = () => {
              <p>Create a post</p>
             </div>
             <div className="create-post-body">
-              <button>Video</button>
-              <button>Photo</button>
-              <button>Write Article</button>
+              <button><i className="fa-solid fa-circle-play green-btn"></i> Video</button>
+              <button><i className="fa-solid fa-image dgrbl-btn"></i> Photo</button>
+              <button><i className="fa-solid fa-newspaper orng-btn"></i> Write article</button>
             </div>
           </div>
         </div>

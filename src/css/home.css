@@ -60,10 +60,10 @@
 }
 
 .create-a-post {
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem;
     background-color: #fff;
     border-radius: 5px;
-    /* box-shadow: 0px 7px 30px #00000029; */
+    box-shadow: 0px 10px 10px #0000001d;
    
 
 }
@@ -96,4 +96,22 @@
     border: none;
     background-color: transparent;
     color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.create-post-body i{
+    font-size: 22px;
+}
+.green-btn{
+    color: #067d06;
+}
+.dgrbl-btn{
+    color: dodgerblue;
+}
+.orng-btn{
+    color: #ff7300;
 }
