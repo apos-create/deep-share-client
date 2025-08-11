@@ -39,7 +39,19 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="middle-content"></div>
+        <div className="middle-content">
+          <div className="create-a-post">
+            <div className="create-post-header">
+              <ProfileIcon height={50}/>
+             <p>Create a post</p>
+            </div>
+            <div className="create-post-body">
+              <button>Video</button>
+              <button>Photo</button>
+              <button>Write Article</button>
+            </div>
+          </div>
+        </div>
 
         <div className="right-content">
 
