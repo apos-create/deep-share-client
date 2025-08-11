@@ -72,13 +72,13 @@ const Home = () => {
                     <div className="author-info">
                       <h3>{pd.author_name}</h3>
                       <p>{pd.author_bio}</p>
-                      <p>{pd.posted_at}</p>
+                      <p className='small'>{pd.posted_at}</p>
                     </div>
                   </div>
 
                   <div className="post-actions">
-                    <span>...</span>
-                    <span>X</span>
+                    <i className="fa-solid fa-ellipsis"></i>
+                    <i className="fa-solid fa-xmark"></i>
                   </div>
                 </div>
 
@@ -90,9 +90,9 @@ const Home = () => {
                 </div>
 
                 <div className="post-controls">
-                  <button><i> </i> <span>{pd.likes}</span></button>
-                  <button><i> </i> <span>{pd.comments}</span></button>
-                  <button><i> </i> <span>{pd.share}</span></button>
+                  <button><i className="fa-solid fa-heart"></i> <span>{pd.likes}</span></button>
+                  <button><i className="fa-solid fa-comment-dots"></i> <span>{pd.comments}</span></button>
+                  <button><i className="fa-solid fa-share-nodes"></i> <span>{pd.share}</span></button>
 
                 </div>
               </div>
