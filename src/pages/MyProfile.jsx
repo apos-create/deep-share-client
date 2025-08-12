@@ -1,4 +1,6 @@
 import React from 'react'
+import "../css/my-profile.css"
+
 
 import { useSelector } from 'react-redux'
 import NavbarContainer from '../components/NavbarContainer';
@@ -22,7 +24,7 @@ const MyProfile = () => {
               <img src={user.pic} alt="" />
             </div>
 
-            <button className="update-cover-button">Update Cover</button>
+            <button className="update-cover-button"><i className="fa-solid fa-pen"></i></button>
           </div>
 
           <div className="profile-info">
@@ -31,7 +33,7 @@ const MyProfile = () => {
               Stack Project Collaboration</p>
             <p>India</p>
 
-            <button className="update-profile-info">Edit Profile</button>
+            <button className="update-profile-info"><i className="fa-solid fa-pen"></i></button>
           </div>
         </div>
 
@@ -43,7 +45,7 @@ const MyProfile = () => {
             Doing MERN stack projects.
             Let's connect, collaborate and contribute.…
           </p>
-          <button className="edit-about-button">Edit about</button>
+          <button className="edit-about-button"><i className="fa-solid fa-pen"></i></button>
         </div>
 
         <div className="posts">
@@ -51,24 +53,27 @@ const MyProfile = () => {
 
             <h3>Posts</h3>
             <button className="create-post-button">Create a post</button>
+            <button><i className="fa-solid fa-pen"></i></button>
           </div>
         </div>
 
         <div className="experience">
           <h3>Experience</h3>
           <button className="add-experience-button">Add experience</button>
+          <button><i className="fa-solid fa-pen"></i></button>
         </div>
 
         <div className="education">
           <h3>Education</h3>
 
-          <button className="add-education-button">Add</button>
-          <button className='edit-education-button'>Edit</button>
+          <button className="add-education-button"><i className="fa-solid fa-plus"></i></button>
+          <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
         </div>
 
         <div className="skills">
           <h3>Skills</h3>
           <button className='add-skills-button'>Add Skills</button>
+          <button><i className="fa-solid fa-pen"></i></button>
         </div>
       </div>
 
