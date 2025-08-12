@@ -1,4 +1,7 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import ProfileIcon from './ProfileIcon'
+
 
 const NavbarMiniBottom = () => {
     return (
