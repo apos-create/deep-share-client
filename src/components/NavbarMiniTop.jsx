@@ -1,7 +1,7 @@
 import React from 'react'
 import "../css/navbar-mini.css"
 
-
+ 
 const NavbarMiniTop = () => {
   return (
     <div className='navbar-mini-top'>

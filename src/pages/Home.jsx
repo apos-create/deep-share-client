@@ -1,26 +1,24 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import "../css/home.css"
 import { useSelector } from 'react-redux';
 import ProfileIcon from '../components/ProfileIcon'
 import CoverImage from '../components/CoverImage';
 import ConnectCard from '../components/ConnectCard';
 import connectData from '../assets/connectData';
 import postData from '../assets/postData';
-
 import { NavLink } from 'react-router-dom'
 import { x_unit_ago } from '../utils/x_unit_ago';
-import useScrollUp from '../hooks/useScrollUp';
+import NavbarContainer from '../components/NavbarContainer';
+import "../css/home.css"
+
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);
-const isUp = useScrollUp();
-console.log(isUp);
-  console.log(postData);
+
+  // console.log(postData);
   return (
     <>
-      <Navbar />
-
+      
+<NavbarContainer/>
 
       <div className="container">
         <div className="left-content">
