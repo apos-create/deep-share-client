@@ -10,10 +10,12 @@ import postData from '../assets/postData';
 
 import { NavLink } from 'react-router-dom'
 import { x_unit_ago } from '../utils/x_unit_ago';
+import useScrollUp from '../hooks/useScrollUp';
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);
-
+const isUp = useScrollUp();
+console.log(isUp);
   console.log(postData);
   return (
     <>

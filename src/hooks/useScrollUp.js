@@ -1,29 +1,30 @@
 import { useEffect, useState } from "react";
 
-export default function useScrollUp() {
+export default function useScrollUp(delay = 150) {
 
-    const [isUp, setIsUp] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-
+    const [scrollUp, setScrollUp] = useState(true);
+    let timeoutId;
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
-                // scrolling down
-                setIsUp(false);
+        let lastScrollY = window.scrollY;
 
-            } else {
-                // scrolling up
-                setIsUp(true);
-            }
-            setLastScrollY(window.scrollY);
+        const onScroll = () => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                const currentScrollY = window.scrollY;
+                setScrollUp(currentScrollY < lastScrollY);
+                lastScrollY = currentScrollY;
+            }, delay);
         };
+ 
+        window.addEventListener("scroll", onScroll)
+        return () => {
+            clearTimeout(timeoutId);
+            window.removeEventListener("scroll", onscroll);
+        }
 
-        window.addEventListener("scroll", handleScroll);
-        return ()=> window.removeEventListener("scroll", handleScroll);
-
-    }, [lastScrollY]);
+    }, [delay])
 
 
-    return isUp;
+    return scrollUp;
 }
