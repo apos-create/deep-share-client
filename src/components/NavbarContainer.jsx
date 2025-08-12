@@ -9,6 +9,10 @@ const NavbarContainer = () => {
     // const isUp = useScrollUp();
     const screenSize = useScreenSize();
     let small = screenSize.width < 768;
+    const style = {
+        width:"100%",
+        height: "10vh"
+    };
 
     return (
         <>
@@ -17,6 +21,7 @@ const NavbarContainer = () => {
                     <>
                         <NavbarMiniTop />
                         <NavbarMiniBottom />
+                        <div style={style}></div>
                     </>
                 ) : (
                     <Navbar />

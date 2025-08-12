@@ -1,6 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+
 import { useSelector } from 'react-redux'
+import NavbarContainer from '../components/NavbarContainer';
 
 const MyProfile = () => {
   const { user } = useSelector((state) => state.user);
@@ -13,7 +14,7 @@ const MyProfile = () => {
   }
   return (
     <>
-      <Navbar />
+     <NavbarContainer/>
       <div className="my-profile">
         <div className="profile-header">
           <div style={style} className="profile-cover">

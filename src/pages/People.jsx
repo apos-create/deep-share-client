@@ -1,17 +1,14 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import NavbarMiniBottom from '../components/NavbarMiniBottom'
-import NavbarMiniTop from '../components/NavbarMiniTop'
+import NavbarContainer from '../components/NavbarContainer'
+
 
 const People = () => {
   return (
     <>
-      {/* <Navbar /> */}
-
-      <NavbarMiniTop />
+     <NavbarContainer/>
       <h1>People</h1>
 
-      <NavbarMiniBottom />
+      
     </>
   )
 }

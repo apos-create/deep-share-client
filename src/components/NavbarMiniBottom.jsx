@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import ProfileIcon from './ProfileIcon'
 
 import "../css/navbar-mini.css"
- 
+  
 const NavbarMiniBottom = () => {
     return (
         <div className='navbar-mini-bottom'>

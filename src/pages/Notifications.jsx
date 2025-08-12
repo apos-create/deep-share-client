@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import NavbarContainer from '../components/NavbarContainer'
 
 const Notifications = () => {
   return (
     <>
-     <Navbar />
-    
+     <NavbarContainer/>
+  
     <h1>Notifications</h1>
     </>
   )

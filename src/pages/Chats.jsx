@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import UploadModal from '../components/UploadModel'
+import NavbarContainer from '../components/NavbarContainer'
+// import UploadModal from '../components/UploadModel'
 
 const Chats = () => {
   return (
     <>
-    <Navbar/>
+    <NavbarContainer/>
 
     <h1>Chats Page</h1>
 
-    <UploadModal/>
+    {/* <UploadModal/> */}
     </>
   )
 }
