@@ -1,17 +1,20 @@
-.navbar-mini-top{
+.navbar-mini-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:.5rem;
+    padding: .5rem;
     background-color: #fff;
     box-shadow: 0 5px 50px #0000002f;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.navbar-mini-top h2{
+.navbar-mini-top h2 {
     color: #174675;
 }
 
-.navbar-mini-top p{
+.navbar-mini-top p {
     border: 1px solid #ccc;
     padding: .5rem 1rem;
     width: 60%;
@@ -20,6 +23,43 @@
     color: #777;
     cursor: pointer;
 }
-.navbar-mini-top i{
+
+.navbar-mini-top i {
     margin-right: .5rem;
+}
+
+
+/* ########### bottom navbar ##############  */
+.navbar-mini-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: .5rem;
+    box-shadow: 0 5px 50px #0000002f;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-mini-bottom i {
+    font-size: 18px;
+}
+
+.navbar-mini-bottom a{
+     border: 1px solid #ccc;
+    padding: .5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    transition: all .3s ease;
+}
+.navbar-mini-bottom a.active {
+    color: #174675;
+    i {
+        font-size: 22px;
+    }
 }
