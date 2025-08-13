@@ -3,6 +3,7 @@ import "../css/connect-card.css"
 
 
 const ConnectCard = ({ data }) => {
+    
     const style = {
         backgroundImage: `url(${data.coverImage})`,
         backgroundSize: "cover",
@@ -12,7 +13,7 @@ const ConnectCard = ({ data }) => {
         height: "60px"
     }
     return (
-        <div className='connect-card'>
+        <div className='connect-card' >
             <div className="connect-card-head">
                 <div style={style} className="connect-card-cover">
                     <div className="connect-card-dp">

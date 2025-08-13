@@ -21,6 +21,10 @@
     padding: 1rem;
 }
 
+/* ########## right content ################  */
+.right-content .home-suggestion{
+    width: 70%;
+}
 /* ------------------  */
 .my-profile-card {
     width: 80%;

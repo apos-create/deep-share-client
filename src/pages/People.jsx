@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavbarContainer from '../components/NavbarContainer'
-
+import "../css/people.css"
+import connectData from '../assets/connectData';
+import ConnectCard from '../components/ConnectCard';
 
 const People = () => {
-  const [text, setText] = useState("");
-
+  console.log(connectData);
 
   const space = {
     height: "10vh",
@@ -12,11 +13,35 @@ const People = () => {
   return (
     <>
       <NavbarContainer />
-      <h1>People</h1>
+      <div className="people-wrapper">
+        <div className="people-header">
+          <h3>More Suggestions For You</h3>
+        </div>
 
-      <textarea onChange={(e)=>setText(e.target.value)} style={{padding:"1rem", margin:"1rem"}} id="" rows="10"></textarea>
-
-<p style={{padding:"1rem", margin:"1rem", whiteSpace: "pre-wrap"}}>{text}</p>
+        <div className="people-body">
+          {
+            connectData.map((p, i) => (
+              <div className="people" key={i}>
+                <ConnectCard data={p} />
+              </div>
+            ))
+          }
+          {
+            connectData.map((p, i) => (
+              <div className="people" key={i}>
+                <ConnectCard data={p} />
+              </div>
+            ))
+          }
+          {
+            connectData.map((p, i) => (
+              <div className="people" key={i}>
+                <ConnectCard width='100%' data={p} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
       <div style={space}></div>
     </>
   )

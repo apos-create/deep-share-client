@@ -1,0 +1,39 @@
+.people-wrapper{
+    width: 50%;
+    margin:1rem auto;
+}
+
+.people-header{
+    padding: 1rem;
+    background-color: #fff;
+    color: #555;
+    border-radius: 5px;
+    box-shadow: 0px 5px 50px #00000026;
+}
+
+.people-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.people{
+    width: 30%;
+   
+}
+
+
+/* ############## responsiveness ############  */
+@media screen and (max-width:480px) {
+    .people-wrapper{
+        width: 100%;
+        padding: .5rem;
+
+    }
+    .people-body{
+        gap: .5rem;
+    }
+    .people{
+        width: 48%;
+    }
+}
