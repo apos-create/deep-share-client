@@ -108,7 +108,7 @@ const Home = () => {
 
         <div className="right-content">
           {
-            connectData.slice(6, 8).map((cd, i) =>(<div className='home-suggestion'><ConnectCard key={i} data={cd} /></div>) )
+            connectData.slice(6, 8).map((cd, i) =>(<div className='home-suggestion' key={i}><ConnectCard key={i} data={cd} /></div>) )
 
           }
         </div>
