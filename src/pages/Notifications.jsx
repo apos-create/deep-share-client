@@ -1,19 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavbarContainer from '../components/NavbarContainer'
+import notifications from '../assets/notifications'
 
 const Notifications = () => {
+  const [current, setCurrent] = useState(notifications);
 
+  // handle filter
+  const handleFilter = (e) => {
+    if (e.target.value === "all") {
+      setCurrent(notifications);
+    } else {
+      const filteredNotis = notifications.filter(n => n.type === e.target.value);
+      setCurrent(filteredNotis);
+    }
+
+  }
   const space = {
-    height:"10vh",
+    height: "10vh",
   }
   return (
     <>
-     <NavbarContainer/>
-  
-    <h1>Notifications</h1>
+      <NavbarContainer />
+
+      <div className="notifications">
+        <div className="noti-header">
+          <h3>Notification</h3>
+          <hr />
+          <div>
+            <p>Filter : </p>
+            <select onChange={handleFilter} >
+              <option value="all">All</option>
+              <option value="like">Like</option>
+              <option value="follow">Follow</option>
+              <option value="mention">Mention</option>
+              <option value="event">Event</option>
+              <option value="reaction">Reaction</option>
+              <option value="share">Share</option>
+              <option value="reminder">Reminder</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="noti-body">
+          {
+            current.map((n) => (
+              <div key={n.id}>
+                <div className="noti-icon">
+                  <img src={n.dp} alt="" />
+                </div>
+
+                <p>{n.message}</p>
+
+                <div>
+                  <p>{n.time}</p>
+                    <i className="fa-solid fa-ellipsis"></i>
+
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
 
 
-    <div style={space}></div>
+      <div style={space}></div>
     </>
   )
 }
