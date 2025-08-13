@@ -5,7 +5,7 @@ import connectData from '../assets/connectData';
 import ConnectCard from '../components/ConnectCard';
 
 const People = () => {
-  console.log(connectData);
+  // console.log(connectData);
 
   const space = {
     height: "10vh",

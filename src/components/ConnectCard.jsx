@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/connect-card.css"
+import shortString from '../utils/short_string';
 
 
 const ConnectCard = ({ data }) => {
@@ -23,7 +24,7 @@ const ConnectCard = ({ data }) => {
             </div>
             <div className="connect-card-body">
                 <h3>{data.fullName}</h3>
-                <p>{data.bio}</p>
+                <p>{ shortString(data.bio, 30) }</p>
                 <p className='t12'>DeepShare Suggestion</p>
                 <button><i className="fa-solid fa-user-plus"></i> Connect</button>
             </div>
