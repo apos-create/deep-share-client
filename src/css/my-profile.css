@@ -79,6 +79,22 @@
 
 }
 
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.about-header button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
 .posts {
     padding: 1.5rem;
     background-color: #fff;
@@ -86,6 +102,39 @@
     margin: 1rem 0;
     border-radius: 5px;
     color: #444;
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.posts-header span {
+    cursor: pointer;
+    color: #10467c;
+    font-size: 14px;
+    border: 1px solid #10467c;
+    border-radius: 5px;
+    padding: .3rem .5rem;
+    margin-right: 1rem;
+}
+
+.posts-header button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.posts-wrapper {
+    height: 60vh;
+    border: 1px dashed #10467c;
+    border-radius: 5px;
+
 }
 
 .parent-wrapper {
@@ -104,11 +153,32 @@
 
 }
 
-
+.child-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.child-header button{
+     outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+.child-body button{
+     outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #10467c;
+    cursor: pointer;
+}
 /* ############ media query ############  */
 @media screen and (max-width:768px) {
     .my-profile {
-    width: 95%;
-    margin: auto;
-}
+        width: 95%;
+        margin: auto;
+    }
 }

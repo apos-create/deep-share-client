@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavbarContainer from '../components/NavbarContainer'
 
 
 const People = () => {
+  const [text, setText] = useState("");
+
 
   const space = {
-    height:"10vh",
+    height: "10vh",
   }
   return (
     <>
-     <NavbarContainer/>
+      <NavbarContainer />
       <h1>People</h1>
 
-      
-<div style={space}></div>
+      <textarea onChange={(e)=>setText(e.target.value)} style={{padding:"1rem", margin:"1rem"}} id="" rows="10"></textarea>
+
+<p style={{padding:"1rem", margin:"1rem", whiteSpace: "pre-wrap"}}>{text}</p>
+      <div style={space}></div>
     </>
   )
 }

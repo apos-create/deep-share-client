@@ -15,7 +15,7 @@ const MyProfile = () => {
     backgroundPosition: "center"
   };
   const space = {
-    height:"10vh",
+    height: "10vh",
   }
   return (
     <>
@@ -45,10 +45,10 @@ const MyProfile = () => {
             <h3>About</h3>
             <button className="edit-about-button"><i className="fa-solid fa-pen"></i></button>
           </div>
-          <p>
-            A Lifelong Learner
-            Pursuing BCA with passion.
-            Doing MERN stack projects.
+          <p style={{ whiteSpace: "pre-wrap", fontSize: "14px" }}>
+            A Lifelong Learner <br />
+            Pursuing BCA with passion. <br />
+            Doing MERN stack projects. <br />
             Let's connect, collaborate and contribute.…
           </p>
         </div>
@@ -57,8 +57,26 @@ const MyProfile = () => {
           <div className="posts-header">
             <h3>Posts</h3>
             <div>
-              <button className="create-post-button">Create a post</button>
+              <span className="create-post-button">Create a post</span>
               <button><i className="fa-solid fa-pen"></i></button>
+            </div>
+          </div>
+
+          <div className="posts-wrapper">
+
+          </div>
+        </div>
+
+        <div className="parent-wrapper">
+          <div className="child-wrapper">
+            <div className="child-header">
+              <h3>Experience</h3>
+              <button><i className="fa-solid fa-pen"></i></button>
+            </div>
+
+
+            <div className="child-body">
+              <button className="add-experience-button"><i className="fa-solid fa-plus"></i> Add experience</button>
             </div>
           </div>
         </div>
@@ -66,35 +84,37 @@ const MyProfile = () => {
         <div className="parent-wrapper">
           <div className="child-wrapper">
             <div className="child-header">
-            <h3>Experience</h3>
-            <button><i className="fa-solid fa-pen"></i></button>
-
+              <h3>Education</h3>
+              <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
             </div>
-            <button className="add-experience-button">Add experience</button>
-          </div>
-        </div>
 
-        <div className="parent-wrapper">
-          <div className="child-wrapper">
-            <h3>Education</h3>
+            <div className="child-body">
+              <button className="add-education-button"><i className="fa-solid fa-plus"></i> Add Education</button>
+            </div>
 
-            <button className="add-education-button"><i className="fa-solid fa-plus"></i></button>
-            <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
+
           </div>
 
         </div>
 
         <div className="parent-wrapper">
           <div className="child-wrapper">
-            <h3>Skills</h3>
-            <button className='add-skills-button'>Add Skills</button>
-            <button><i className="fa-solid fa-pen"></i></button>
+            <div className="child-header">
+              <h3>Skills</h3>
+              <button><i className="fa-solid fa-pen"></i></button>
+            </div>
+
+            <div className="child-body">
+              <button className='add-skills-button'><i className="fa-solid fa-plus"></i> Add Skills</button>
+            </div>
+
+
           </div>
         </div>
       </div>
 
 
-<div style={space}></div>
+      <div style={space}></div>
     </>
   )
 }
