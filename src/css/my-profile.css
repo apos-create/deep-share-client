@@ -56,7 +56,10 @@
     position: relative;
     color: #444;
 }
-
+.profile-info p{
+    font-size: 14px;
+    margin-bottom: .5rem;
+}
 .profile-info button {
     position: absolute;
     right: 1rem;
@@ -78,12 +81,14 @@
     color: #444;
 
 }
-
+.about hr{
+    font-size: 14px;
+    margin: .5rem 0;
+}
 .about-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .about-header button {
@@ -103,12 +108,14 @@
     border-radius: 5px;
     color: #444;
 }
-
+.posts hr{
+    font-size: 14px;
+    margin: .5rem 0;
+}
 .posts-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .posts-header span {
@@ -153,11 +160,14 @@
 
 }
 
+.child-wrapper hr{
+    font-size: 14px;
+    margin: .5rem 0;
+}
 .child-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
 }
 .child-header button{
      outline: none;
@@ -180,5 +190,12 @@
     .my-profile {
         width: 95%;
         margin: auto;
+    }
+    .profile-cover{
+        height: 130px;
+    }
+    .profile-pic{
+        width: 110px;
+        height: 110px;
     }
 }

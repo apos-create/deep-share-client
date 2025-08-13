@@ -31,7 +31,7 @@ const MyProfile = () => {
           </div>
 
           <div className="profile-info">
-            <h1>{user.fullName}</h1>
+            <h2>{user.fullName}</h2>
             <p> Get 1% Better Everyday | JavaScript Developer | Looking For MERN
               Stack Project Collaboration</p>
             <p>India</p>
@@ -45,6 +45,7 @@ const MyProfile = () => {
             <h3>About</h3>
             <button className="edit-about-button"><i className="fa-solid fa-pen"></i></button>
           </div>
+          <hr />
           <p style={{ whiteSpace: "pre-wrap", fontSize: "14px" }}>
             A Lifelong Learner <br />
             Pursuing BCA with passion. <br />
@@ -61,7 +62,7 @@ const MyProfile = () => {
               <button><i className="fa-solid fa-pen"></i></button>
             </div>
           </div>
-
+          <hr />
           <div className="posts-wrapper">
 
           </div>
@@ -73,7 +74,7 @@ const MyProfile = () => {
               <h3>Experience</h3>
               <button><i className="fa-solid fa-pen"></i></button>
             </div>
-
+            <hr />
 
             <div className="child-body">
               <button className="add-experience-button"><i className="fa-solid fa-plus"></i> Add experience</button>
@@ -87,7 +88,7 @@ const MyProfile = () => {
               <h3>Education</h3>
               <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
             </div>
-
+            <hr />
             <div className="child-body">
               <button className="add-education-button"><i className="fa-solid fa-plus"></i> Add Education</button>
             </div>
@@ -103,6 +104,8 @@ const MyProfile = () => {
               <h3>Skills</h3>
               <button><i className="fa-solid fa-pen"></i></button>
             </div>
+
+            <hr />
 
             <div className="child-body">
               <button className='add-skills-button'><i className="fa-solid fa-plus"></i> Add Skills</button>
