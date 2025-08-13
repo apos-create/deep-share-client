@@ -46,13 +46,14 @@ const Notifications = () => {
           {
             current.map((n) => (
               <div className='noti' key={n.id}>
-                <div className="noti-icon">
-                  <img src={n.dp} alt="" />
+                <div className="noti-body">
+                  <div className="noti-icon">
+                    <img src={n.dp} alt="" />
+                  </div>
+                  <p>{n.message}</p>
                 </div>
 
-                <p>{n.message}</p>
-
-                <div>
+                <div className='noti-action'>
                   <p>{n.time}</p>
                   <i className="fa-solid fa-ellipsis"></i>
                 </div>
