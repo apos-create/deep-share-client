@@ -16,7 +16,7 @@ const MyProfile = () => {
   }
   return (
     <>
-     <NavbarContainer/>
+      <NavbarContainer />
       <div className="my-profile">
         <div className="profile-header">
           <div style={style} className="profile-cover">
@@ -57,23 +57,30 @@ const MyProfile = () => {
           </div>
         </div>
 
-        <div className="experience">
-          <h3>Experience</h3>
-          <button className="add-experience-button">Add experience</button>
-          <button><i className="fa-solid fa-pen"></i></button>
+        <div className="parent-wrapper">
+          <div className="child-wrapper">
+            <h3>Experience</h3>
+            <button className="add-experience-button">Add experience</button>
+            <button><i className="fa-solid fa-pen"></i></button>
+          </div>
         </div>
 
-        <div className="education">
-          <h3>Education</h3>
+        <div className="parent-wrapper">
+          <div className="child-wrapper">
+            <h3>Education</h3>
 
-          <button className="add-education-button"><i className="fa-solid fa-plus"></i></button>
-          <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
+            <button className="add-education-button"><i className="fa-solid fa-plus"></i></button>
+            <button className='edit-education-button'><i className="fa-solid fa-pen"></i></button>
+          </div>
+
         </div>
 
-        <div className="skills">
-          <h3>Skills</h3>
-          <button className='add-skills-button'>Add Skills</button>
-          <button><i className="fa-solid fa-pen"></i></button>
+        <div className="parent-wrapper">
+          <div className="child-wrapper">
+            <h3>Skills</h3>
+            <button className='add-skills-button'>Add Skills</button>
+            <button><i className="fa-solid fa-pen"></i></button>
+          </div>
         </div>
       </div>
 

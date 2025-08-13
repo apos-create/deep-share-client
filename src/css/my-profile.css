@@ -50,20 +50,56 @@
     object-fit: cover;
 }
 
-.profile-info{
+.profile-info {
     padding: 1rem;
     padding-top: 4rem;
     position: relative;
     color: #444;
 }
-.profile-info button{
+
+.profile-info button {
     position: absolute;
     right: 1rem;
     top: 1rem;
     outline: none;
     border: none;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
     cursor: pointer;
+}
+
+.about {
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 5px 50px #0000001c;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: #444;
+
+}
+
+.posts {
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 5px 50px #0000001c;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: #444;
+}
+
+.parent-wrapper {
+    padding: .5rem;
+    background-color: #fff;
+    box-shadow: 0 5px 50px #0000001c;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: #444;
+}
+
+.child-wrapper {
+    border: 1px dashed dodgerblue;
+    padding: .5rem 1rem 1rem;
+    border-radius: 5px;
+
 }
