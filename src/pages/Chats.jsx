@@ -4,6 +4,10 @@ import NavbarContainer from '../components/NavbarContainer'
 // import UploadModal from '../components/UploadModel'
 
 const Chats = () => {
+  
+  const space = {
+    height:"10vh",
+  }
   return (
     <>
     <NavbarContainer/>
@@ -11,6 +15,8 @@ const Chats = () => {
     <h1>Chats Page</h1>
 
     {/* <UploadModal/> */}
+
+    <div style={space}></div>
     </>
   )
 }

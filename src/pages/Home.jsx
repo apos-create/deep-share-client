@@ -15,6 +15,10 @@ const Home = () => {
   const { user } = useSelector((state) => state.user);
 
   // console.log(postData);
+
+  const space = {
+    height:"10vh",
+  }
   return (
     <>
       
@@ -110,7 +114,7 @@ const Home = () => {
 
       </div>
 
-
+<div style={space}></div>
     </>
   )
 }

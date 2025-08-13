@@ -13,6 +13,9 @@ const MyProfile = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center"
+  };
+  const space = {
+    height:"10vh",
   }
   return (
     <>
@@ -38,30 +41,36 @@ const MyProfile = () => {
         </div>
 
         <div className="about">
-          <h3>About</h3>
+          <div className="about-header">
+            <h3>About</h3>
+            <button className="edit-about-button"><i className="fa-solid fa-pen"></i></button>
+          </div>
           <p>
             A Lifelong Learner
             Pursuing BCA with passion.
             Doing MERN stack projects.
             Let's connect, collaborate and contribute.…
           </p>
-          <button className="edit-about-button"><i className="fa-solid fa-pen"></i></button>
         </div>
 
         <div className="posts">
           <div className="posts-header">
-
             <h3>Posts</h3>
-            <button className="create-post-button">Create a post</button>
-            <button><i className="fa-solid fa-pen"></i></button>
+            <div>
+              <button className="create-post-button">Create a post</button>
+              <button><i className="fa-solid fa-pen"></i></button>
+            </div>
           </div>
         </div>
 
         <div className="parent-wrapper">
           <div className="child-wrapper">
+            <div className="child-header">
             <h3>Experience</h3>
-            <button className="add-experience-button">Add experience</button>
             <button><i className="fa-solid fa-pen"></i></button>
+
+            </div>
+            <button className="add-experience-button">Add experience</button>
           </div>
         </div>
 
@@ -84,6 +93,8 @@ const MyProfile = () => {
         </div>
       </div>
 
+
+<div style={space}></div>
     </>
   )
 }

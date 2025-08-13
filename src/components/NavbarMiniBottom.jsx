@@ -15,8 +15,8 @@ const NavbarMiniBottom = () => {
                 <i className="fa-solid fa-users"></i>
             </NavLink>
 
-            <NavLink to={'/chats'}>
-                <i className="fa-solid fa-comments"></i>
+            <NavLink >
+                <i className="fa-solid fa-plus"></i>
             </NavLink>
 
             <NavLink to={'/notifications'}>
