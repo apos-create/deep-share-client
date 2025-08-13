@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom'
 import { x_unit_ago } from '../utils/x_unit_ago';
 import NavbarContainer from '../components/NavbarContainer';
 import "../css/home.css"
+import shortString from '../utils/short_string';
 
 
 const Home = () => {
@@ -76,7 +77,7 @@ const Home = () => {
 
                     <div className="author-info">
                       <h3>{pd.author_name}</h3>
-                      <p>{pd.author_bio}</p>
+                      <p>{shortString(pd.author_bio, 35)}</p>
                       <p className='small'>{x_unit_ago(pd.posted_at)}</p>
                     </div>
                   </div>
