@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NavbarContainer from '../components/NavbarContainer'
 import notifications from '../assets/notifications'
+import "../css/notifications.css"
 
 const Notifications = () => {
   const [current, setCurrent] = useState(notifications);
@@ -24,9 +25,9 @@ const Notifications = () => {
 
       <div className="notifications">
         <div className="noti-header">
-          <h3>Notification</h3>
+          <h2>Notification</h2>
           <hr />
-          <div>
+          <div className='filter-noti'>
             <p>Filter : </p>
             <select onChange={handleFilter} >
               <option value="all">All</option>
@@ -41,10 +42,10 @@ const Notifications = () => {
           </div>
         </div>
 
-        <div className="noti-body">
+        <div className="noti-wrapper">
           {
             current.map((n) => (
-              <div key={n.id}>
+              <div className='noti' key={n.id}>
                 <div className="noti-icon">
                   <img src={n.dp} alt="" />
                 </div>
@@ -53,8 +54,7 @@ const Notifications = () => {
 
                 <div>
                   <p>{n.time}</p>
-                    <i className="fa-solid fa-ellipsis"></i>
-
+                  <i className="fa-solid fa-ellipsis"></i>
                 </div>
               </div>
             ))
